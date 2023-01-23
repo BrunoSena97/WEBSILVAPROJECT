@@ -1,0 +1,87 @@
+[
+  {
+    "id": 16,
+    "name": "Test_1",
+    "description": "",
+    "path": "Sociedade_Importadora\\Test_1\\Test_1",
+    "driving": [
+      {
+        "id": "manufacturer",
+        "value": ""
+      },
+      {
+        "id": "type",
+        "value": ""
+      },
+      {
+        "id": "serial",
+        "value": ""
+      },
+      {
+        "id": "coupling",
+        "value": ""
+      }
+    ],
+    "driven": [
+      {
+        "id": "manufacturer",
+        "value": ""
+      },
+      {
+        "id": "type",
+        "value": ""
+      },
+      {
+        "id": "serial",
+        "value": ""
+      },
+      {
+        "id": "coupling",
+        "value": ""
+      }
+    ],
+    "transmission": [
+      {
+        "id": "manufacturer",
+        "value": ""
+      },
+      {
+        "id": "type",
+        "value": ""
+      },
+      {
+        "id": "serial",
+        "value": ""
+      }
+    ],
+    "machineCode": "",
+    "power": "",
+    "gear": "",
+    "isoClass": 0,
+    "idContact": 0,
+    "conditionalPoint": 0,
+    "conditionalPointSrc": null,
+    "conditionalPointTag": [
+      {
+        "id": "name",
+        "value": null
+      },
+      {
+        "id": "description",
+        "value": null
+      }
+    ],
+    "coordinates": [
+      {
+        "id": "lat",
+        "value": 0,
+        "unit": "decimal degree"
+      },
+      {
+        "id": "lng",
+        "value": 0,
+        "unit": "decimal degree"
+      }
+    ]
+  }
+]

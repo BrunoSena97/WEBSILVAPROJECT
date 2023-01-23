@@ -1,0 +1,539 @@
+[
+  {
+    "ID": 19,
+    "ParentID": 16,
+    "MachineID": 16,
+    "Name": "Test_1.Temp_2",
+    "Description": "Temperature_2",
+    "NodeType": 10206,
+    "NodeTypeName": "Process (IMx)",
+    "Axes": 0,
+    "EUType": 0,
+    "EU": "Other",
+    "Detection": 1,
+    "DetectionName": "Peak",
+    "Status": [
+      2
+    ],
+    "OverallAlarm": {
+      "Type": 3,
+      "TypeName": "Outside window",
+      "Summary": "High alarm 27 / High warning 25 / Low warning 2 / Low alarm -2",
+      "ChannelInfo": ""
+    },
+    "Frequencies": [],
+    "Diagnoses": {
+      "Hysteresis": 7,
+      "HysteresisFilter": 4,
+      "Diagnoses": [],
+      "ProteanDiagnoses": []
+    },
+    "LastMeasurement": {
+      "ReadingTimeUTC": "2022-07-01T14:04:47.41",
+      "PointID": 19,
+      "Speed": 0,
+      "SpeedUnits": "RPM",
+      "Process": 0,
+      "ProcessUnits": "",
+      "Digital": 0,
+      "NumberOfChannels": 1,
+      "Measurements": [
+        {
+          "Channel": 1,
+          "Direction": "X",
+          "ChannelName": "Overall",
+          "Level": 0.477378815,
+          "Units": "C",
+          "BOV": 0
+        }
+      ],
+      "AlarmInfo": [
+        {
+          "AlarmDate": "2022-07-01T14:04:47.41",
+          "Title": "",
+          "Acknowledged": true,
+          "AcknowledgedDateTime": "2022-07-18T15:11:14.013",
+          "AlarmStatusText": "Low Warning",
+          "Source": 6,
+          "AlarmSourceName": "Overall",
+          "CurrentValue": 0.477378815,
+          "AlarmLevel": 2,
+          "EU": "C"
+        }
+      ]
+    },
+    "AlarmInfo": []
+  },
+  {
+    "ID": 22,
+    "ParentID": 16,
+    "MachineID": 16,
+    "Name": "Test_1.TWA_1/2",
+    "Description": "Time Waveform Analysis",
+    "NodeType": 10219,
+    "NodeTypeName": "Time Waveform Analysis (IMx)",
+    "Axes": 2,
+    "EUType": 1,
+    "EU": "g",
+    "Detection": 0,
+    "DetectionName": "",
+    "Status": [
+      2
+    ],
+    "OverallAlarm": null,
+    "Frequencies": [
+      {
+        "Frequency": "Overall",
+        "Name": "True rms",
+        "Summary": "Warning level: 0.1485217 g True Rms / Alarm level: 0.2897854 g True Rms",
+        "ChannelInfo": "Channel X",
+        "WarningLevel": "0.1485217 g True Rms",
+        "AlarmLevel": "0.2897854 g True Rms",
+        "FreqStart": "0 khz",
+        "FreqEnd": "1000 khz"
+      },
+      {
+        "Frequency": "Overall",
+        "Name": "True rms",
+        "Summary": "Warning level: 0.09494172 g True Rms / Alarm level: 0.1850747 g True Rms",
+        "ChannelInfo": "Channel Y",
+        "WarningLevel": "0.09494172 g True Rms",
+        "AlarmLevel": "0.1850747 g True Rms",
+        "FreqStart": "0 khz",
+        "FreqEnd": "1000 khz"
+      }
+    ],
+    "Diagnoses": {
+      "Hysteresis": 7,
+      "HysteresisFilter": 4,
+      "Diagnoses": [
+        {
+          "Name": "Bearing Bearing 2",
+          "IsPrivate": true,
+          "HighAlarm": 0,
+          "HighWarming": 0,
+          "LowWarning": 0,
+          "LowAlarm": 0,
+          "HighAlarmActive": true,
+          "HighWarmingActive": true,
+          "LowWarningActive": false,
+          "LowAlarmActive": false
+        },
+        {
+          "Name": "Bearing Bearing 1",
+          "IsPrivate": true,
+          "HighAlarm": 0,
+          "HighWarming": 0,
+          "LowWarning": 0,
+          "LowAlarm": 0,
+          "HighAlarmActive": true,
+          "HighWarmingActive": true,
+          "LowWarningActive": false,
+          "LowAlarmActive": false
+        }
+      ],
+      "ProteanDiagnoses": []
+    },
+    "LastMeasurement": {
+      "ReadingTimeUTC": "2022-07-01T14:00:00.38",
+      "PointID": 22,
+      "Speed": 0,
+      "SpeedUnits": "RPM",
+      "Process": 0,
+      "ProcessUnits": "",
+      "Digital": 0,
+      "NumberOfChannels": 2,
+      "Measurements": [
+        {
+          "Channel": 1,
+          "Direction": "X",
+          "ChannelName": "Overall",
+          "Level": 0,
+          "Units": "g",
+          "BOV": 12560.5723
+        },
+        {
+          "Channel": 1,
+          "Direction": "X",
+          "ChannelName": "Overall",
+          "Level": 0,
+          "Units": "g",
+          "BOV": 12560.5723
+        },
+        {
+          "Channel": 1,
+          "Direction": "X",
+          "ChannelName": "Overall",
+          "Level": 0,
+          "Units": "g",
+          "BOV": 12560.5723
+        },
+        {
+          "Channel": 1,
+          "Direction": "X",
+          "ChannelName": "Overall",
+          "Level": 0,
+          "Units": "g",
+          "BOV": 12560.5723
+        },
+        {
+          "Channel": 1,
+          "Direction": "X",
+          "ChannelName": "Overall",
+          "Level": 0.0006055982,
+          "Units": "g",
+          "BOV": 12560.5723
+        },
+        {
+          "Channel": 2,
+          "Direction": "Y",
+          "ChannelName": "Overall",
+          "Level": 0,
+          "Units": "g",
+          "BOV": 12244.6143
+        },
+        {
+          "Channel": 2,
+          "Direction": "Y",
+          "ChannelName": "Overall",
+          "Level": 0,
+          "Units": "g",
+          "BOV": 12244.6143
+        },
+        {
+          "Channel": 2,
+          "Direction": "Y",
+          "ChannelName": "Overall",
+          "Level": 0,
+          "Units": "g",
+          "BOV": 12244.6143
+        },
+        {
+          "Channel": 2,
+          "Direction": "Y",
+          "ChannelName": "Overall",
+          "Level": 0,
+          "Units": "g",
+          "BOV": 12244.6143
+        },
+        {
+          "Channel": 2,
+          "Direction": "Y",
+          "ChannelName": "Overall",
+          "Level": 0.000600986066,
+          "Units": "g",
+          "BOV": 12244.6143
+        }
+      ],
+      "AlarmInfo": []
+    },
+    "AlarmInfo": []
+  },
+  {
+    "ID": 18,
+    "ParentID": 16,
+    "MachineID": 16,
+    "Name": "Test_1.Acc_1",
+    "Description": "Vibration_1",
+    "NodeType": 10201,
+    "NodeTypeName": "Dynamic (IMx)",
+    "Axes": 1,
+    "EUType": 1,
+    "EU": "g",
+    "Detection": 1,
+    "DetectionName": "Peak",
+    "Status": [
+      2
+    ],
+    "OverallAlarm": null,
+    "Frequencies": [
+      {
+        "Frequency": "Overall",
+        "Name": "Overall",
+        "Summary": "Fixed frequency: 300 cpm",
+        "ChannelInfo": "Channel X",
+        "WarningLevel": "0.4999212 g P",
+        "AlarmLevel": "0.9451813 g P",
+        "FreqStart": "300 cpm",
+        "FreqEnd": "60000 cpm"
+      }
+    ],
+    "Diagnoses": {
+      "Hysteresis": 7,
+      "HysteresisFilter": 4,
+      "Diagnoses": [
+        {
+          "Name": "Bearing Bearing 2",
+          "IsPrivate": true,
+          "HighAlarm": 0,
+          "HighWarming": 0,
+          "LowWarning": 0,
+          "LowAlarm": 0,
+          "HighAlarmActive": true,
+          "HighWarmingActive": true,
+          "LowWarningActive": false,
+          "LowAlarmActive": false
+        },
+        {
+          "Name": "Bearing Bearing 1",
+          "IsPrivate": true,
+          "HighAlarm": 0,
+          "HighWarming": 0,
+          "LowWarning": 0,
+          "LowAlarm": 0,
+          "HighAlarmActive": true,
+          "HighWarmingActive": true,
+          "LowWarningActive": false,
+          "LowAlarmActive": false
+        }
+      ],
+      "ProteanDiagnoses": []
+    },
+    "LastMeasurement": {
+      "ReadingTimeUTC": "2022-07-01T14:00:01.21",
+      "PointID": 18,
+      "Speed": 0,
+      "SpeedUnits": "RPM",
+      "Process": 0,
+      "ProcessUnits": "",
+      "Digital": 0,
+      "NumberOfChannels": 1,
+      "Measurements": [
+        {
+          "Channel": 1,
+          "Direction": "X",
+          "ChannelName": "Overall",
+          "Level": 0.0016569203,
+          "Units": "g P",
+          "BOV": 12560.5723
+        }
+      ],
+      "AlarmInfo": []
+    },
+    "AlarmInfo": []
+  },
+  {
+    "ID": 17,
+    "ParentID": 16,
+    "MachineID": 16,
+    "Name": "Test_1.Temp_1",
+    "Description": "Temperature_1",
+    "NodeType": 10206,
+    "NodeTypeName": "Process (IMx)",
+    "Axes": 0,
+    "EUType": 0,
+    "EU": "Other",
+    "Detection": 1,
+    "DetectionName": "Peak",
+    "Status": [
+      2
+    ],
+    "OverallAlarm": {
+      "Type": 3,
+      "TypeName": "Outside window",
+      "Summary": "High alarm 45 / High warning 35 / Low warning 2 / Low alarm -2",
+      "ChannelInfo": ""
+    },
+    "Frequencies": [],
+    "Diagnoses": {
+      "Hysteresis": 7,
+      "HysteresisFilter": 4,
+      "Diagnoses": [],
+      "ProteanDiagnoses": []
+    },
+    "LastMeasurement": {
+      "ReadingTimeUTC": "2022-07-01T14:04:47.41",
+      "PointID": 17,
+      "Speed": 0,
+      "SpeedUnits": "RPM",
+      "Process": 0,
+      "ProcessUnits": "",
+      "Digital": 0,
+      "NumberOfChannels": 1,
+      "Measurements": [
+        {
+          "Channel": 1,
+          "Direction": "X",
+          "ChannelName": "Overall",
+          "Level": 0.274754137,
+          "Units": "C",
+          "BOV": 0
+        }
+      ],
+      "AlarmInfo": [
+        {
+          "AlarmDate": "2022-07-01T14:04:47.41",
+          "Title": "",
+          "Acknowledged": true,
+          "AcknowledgedDateTime": "2022-07-18T15:11:14.15",
+          "AlarmStatusText": "Low Warning",
+          "Source": 6,
+          "AlarmSourceName": "Overall",
+          "CurrentValue": 0.274754137,
+          "AlarmLevel": 2,
+          "EU": "C"
+        }
+      ]
+    },
+    "AlarmInfo": []
+  },
+  {
+    "ID": 21,
+    "ParentID": 16,
+    "MachineID": 16,
+    "Name": "Test_1.Dyn_Env_1/2",
+    "Description": "Repetitive Frequencies",
+    "NodeType": 10201,
+    "NodeTypeName": "Dynamic, Envelope (IMx)",
+    "Axes": 2,
+    "EUType": 7,
+    "EU": "gE",
+    "Detection": 1,
+    "DetectionName": "Peak",
+    "Status": [
+      2
+    ],
+    "OverallAlarm": null,
+    "Frequencies": [
+      {
+        "Frequency": "Overall",
+        "Name": "Overall",
+        "Summary": "Fixed frequency: 300 cpm",
+        "ChannelInfo": "Channel X",
+        "WarningLevel": "0.1508519 gE P",
+        "AlarmLevel": "0.2932823 gE P",
+        "FreqStart": "300 cpm",
+        "FreqEnd": "60000 cpm"
+      },
+      {
+        "Frequency": "Overall",
+        "Name": "Overall",
+        "Summary": "Fixed frequency: 300 cpm",
+        "ChannelInfo": "Channel Y",
+        "WarningLevel": "0.09308205 gE P",
+        "AlarmLevel": "0.1810609 gE P",
+        "FreqStart": "300 cpm",
+        "FreqEnd": "60000 cpm"
+      }
+    ],
+    "Diagnoses": {
+      "Hysteresis": 7,
+      "HysteresisFilter": 4,
+      "Diagnoses": [],
+      "ProteanDiagnoses": []
+    },
+    "LastMeasurement": {
+      "ReadingTimeUTC": "2022-07-01T14:00:02.2",
+      "PointID": 21,
+      "Speed": 0,
+      "SpeedUnits": "RPM",
+      "Process": 0,
+      "ProcessUnits": "",
+      "Digital": 0,
+      "NumberOfChannels": 2,
+      "Measurements": [
+        {
+          "Channel": 1,
+          "Direction": "X",
+          "ChannelName": "Overall",
+          "Level": 0.000248200347,
+          "Units": "gE P",
+          "BOV": 12560.5674
+        },
+        {
+          "Channel": 2,
+          "Direction": "Y",
+          "ChannelName": "Overall",
+          "Level": 0.000256378,
+          "Units": "gE P",
+          "BOV": 12244.5791
+        }
+      ],
+      "AlarmInfo": []
+    },
+    "AlarmInfo": []
+  },
+  {
+    "ID": 20,
+    "ParentID": 16,
+    "MachineID": 16,
+    "Name": "Test_1.Acc_2",
+    "Description": "Vibration_2",
+    "NodeType": 10201,
+    "NodeTypeName": "Dynamic (IMx)",
+    "Axes": 1,
+    "EUType": 1,
+    "EU": "g",
+    "Detection": 1,
+    "DetectionName": "Peak",
+    "Status": [
+      2
+    ],
+    "OverallAlarm": null,
+    "Frequencies": [
+      {
+        "Frequency": "Overall",
+        "Name": "Overall",
+        "Summary": "Fixed frequency: 300 cpm",
+        "ChannelInfo": "Channel X",
+        "WarningLevel": "0.09864001 g P",
+        "AlarmLevel": "0.1922365 g P",
+        "FreqStart": "300 cpm",
+        "FreqEnd": "60000 cpm"
+      }
+    ],
+    "Diagnoses": {
+      "Hysteresis": 7,
+      "HysteresisFilter": 4,
+      "Diagnoses": [
+        {
+          "Name": "Bearing Bearing 2",
+          "IsPrivate": true,
+          "HighAlarm": 0,
+          "HighWarming": 0,
+          "LowWarning": 0,
+          "LowAlarm": 0,
+          "HighAlarmActive": true,
+          "HighWarmingActive": true,
+          "LowWarningActive": false,
+          "LowAlarmActive": false
+        },
+        {
+          "Name": "Bearing Bearing 1",
+          "IsPrivate": true,
+          "HighAlarm": 0,
+          "HighWarming": 0,
+          "LowWarning": 0,
+          "LowAlarm": 0,
+          "HighAlarmActive": true,
+          "HighWarmingActive": true,
+          "LowWarningActive": false,
+          "LowAlarmActive": false
+        }
+      ],
+      "ProteanDiagnoses": []
+    },
+    "LastMeasurement": {
+      "ReadingTimeUTC": "2022-07-01T14:00:01.21",
+      "PointID": 20,
+      "Speed": 0,
+      "SpeedUnits": "RPM",
+      "Process": 0,
+      "ProcessUnits": "",
+      "Digital": 0,
+      "NumberOfChannels": 1,
+      "Measurements": [
+        {
+          "Channel": 1,
+          "Direction": "X",
+          "ChannelName": "Overall",
+          "Level": 0.00144028175,
+          "Units": "g P",
+          "BOV": 12244.6143
+        }
+      ],
+      "AlarmInfo": []
+    },
+    "AlarmInfo": []
+  }
+]

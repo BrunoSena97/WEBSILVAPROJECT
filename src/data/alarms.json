@@ -1,0 +1,2786 @@
+[
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 17,
+    "comment": "",
+    "id": 133,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-07-01T14:04:47.41",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-07-18T15:11:14.15",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 2,
+      "unit": "C"
+    },
+    "source": "Overall",
+    "status": "Low Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.274754137,
+      "unit": "C"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 19,
+    "comment": "",
+    "id": 134,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-07-01T14:04:47.41",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-07-18T15:11:14.013",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 2,
+      "unit": "C"
+    },
+    "source": "Overall",
+    "status": "Low Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.477378815,
+      "unit": "C"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 132,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-23T14:27:12.51",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-23T14:27:29.24",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.09864001,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.115742624,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 131,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-23T14:10:58.85",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-23T14:11:25.853",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2932823,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 1.62159455,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 17,
+    "comment": "",
+    "id": 129,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-22T10:03:09.19",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-23T14:09:53.603",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 2,
+      "unit": "C"
+    },
+    "source": "Overall",
+    "status": "Low Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.203733325,
+      "unit": "C"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 19,
+    "comment": "",
+    "id": 130,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-22T10:03:09.19",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-23T14:09:50.017",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 2,
+      "unit": "C"
+    },
+    "source": "Overall",
+    "status": "Low Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.349353254,
+      "unit": "C"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 19,
+    "comment": "",
+    "id": 128,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-17T15:33:07.14",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-23T14:09:50",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 25,
+      "unit": "C"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 25.00939,
+      "unit": "C"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 127,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-17T13:05:03.17",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-17T13:24:35.62",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2932823,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.300828338,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 126,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-17T13:05:01.35",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-17T13:24:41.75",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2897854,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.3221875,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 125,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-17T13:03:21.89",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-17T13:24:41.75",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1850747,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.206387788,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 124,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-17T13:03:20.22",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-17T13:24:35.617",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1810609,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.226130873,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 123,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-17T13:03:19.23",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-17T13:17:33.537",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1922365,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.233437851,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 122,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-17T13:03:18.4",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-17T13:24:41.74",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1485217,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.2453558,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 121,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-17T13:03:16.58",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-17T13:17:33.53",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.09864001,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.198952332,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 120,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-15T09:12:31.23",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-15T09:14:39.92",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1810609,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.7084409,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 119,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-15T09:12:30.24",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-15T09:14:48.057",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1850747,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.343696117,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 118,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-15T09:12:29.41",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-15T09:14:52.823",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1922365,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.5033183,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 117,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-15T09:12:26.75",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-15T09:14:48.053",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.09494172,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.51667124,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 116,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-15T09:12:25.92",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-15T09:14:39.917",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.09308205,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.131960154,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 115,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-15T09:12:24.93",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-15T09:14:52.82",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.09864001,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.11659018,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 114,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-15T09:11:51.57",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-15T09:14:39.913",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1508519,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 2.66371441,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 19,
+    "comment": "",
+    "id": 113,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-13T18:04:26.4",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-15T09:15:03.53",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 25,
+      "unit": "C"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 25.0009365,
+      "unit": "C"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 19,
+    "comment": "",
+    "id": 112,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-12T18:36:50.58",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-15T09:15:03.52",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 25,
+      "unit": "C"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 25.0009365,
+      "unit": "C"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 111,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-07T10:16:03.83",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-07T10:36:34.983",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2897854,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.2902466,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 110,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-07T10:16:02.16",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-07T10:36:30.193",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2932823,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.324041128,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 109,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-07T10:15:07.35",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-07T10:36:34.973",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1850747,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.192413718,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 108,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-07T10:15:03.02",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-07T10:36:30.19",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1810609,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.224858686,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 107,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-07T10:15:02.03",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-07T10:36:23.07",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1922365,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.224497885,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 106,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-07T10:15:01.2",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-07T10:36:34.957",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1485217,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.212771133,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 105,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-07T10:15:00.37",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-07T10:36:30.18",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.09308205,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.23719,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 104,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-07T10:14:59.38",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-07T10:36:23.067",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.09864001,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.196995944,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 103,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-03T10:25:01.23",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-03T10:31:53.247",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2897854,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.758516848,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 18,
+    "comment": "",
+    "id": 101,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-03T10:25:00.4",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-03T10:31:41.417",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.9451813,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 2.32007456,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 102,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-03T10:25:00.4",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-03T10:31:45.287",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1922365,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.221623808,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 100,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-06-03T10:24:59.56",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-03T10:31:49.643",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2932823,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 2.707558,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 19,
+    "comment": "",
+    "id": 99,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-05-28T13:07:43.14",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-06-03T08:54:58.71",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 25,
+      "unit": "C"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 25.0015411,
+      "unit": "C"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 19,
+    "comment": "",
+    "id": 98,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-05-27T14:17:14.19",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-05-27T17:06:03.003",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 25,
+      "unit": "C"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 25.0003338,
+      "unit": "C"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 18,
+    "comment": "",
+    "id": 97,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-27T10:10:00.53",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-27T10:11:07.743",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.4999212,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 1.0043596,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 96,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-27T10:09:32.29",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-27T10:11:07.74",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2897854,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.323794216,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 95,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-27T10:09:30.62",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-27T10:11:07.74",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2932823,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.334468842,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 94,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-27T10:07:59.97",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-27T10:11:07.733",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1508519,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.2218543,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 93,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-27T10:07:58.15",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-27T10:11:07.72",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1850747,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.266723037,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 92,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-27T10:07:57.32",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-27T10:11:07.71",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1922365,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.292268217,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 91,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-27T10:07:56.48",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-27T10:11:07.703",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1810609,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.2572014,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 84,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-05T09:03:53.35",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-05T09:07:49.38",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.09494172,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.108458243,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 83,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-05T09:03:51.53",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-05T09:05:22.59",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1922365,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.498721182,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 82,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-05T09:03:30.47",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-05T09:07:46.187",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1810609,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 1.07298076,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 18,
+    "comment": "",
+    "id": 81,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-01T13:46:07.34",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-01T13:46:57.353",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.4999212,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.5537597,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 80,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-01T13:45:32.14",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-01T13:47:36.063",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1922365,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.198442131,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 79,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-01T13:45:28.66",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-01T13:47:46.907",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1850747,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.195138454,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 78,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-01T13:45:26.99",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-01T13:47:43.283",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2932823,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.3219228,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 77,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-01T13:45:24.33",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-01T13:47:43.28",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1810609,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.2486004,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 76,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-01T13:38:43.67",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-01T13:40:55.34",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1922365,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.209257856,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 75,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-01T13:38:42.83",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-01T13:40:58.543",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1810609,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.242145687,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 74,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-01T13:38:41.84",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-01T13:41:01.487",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1850747,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.209013626,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 73,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-01T13:38:41.01",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-01T13:40:55.333",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.09864001,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.226049766,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 72,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-01T13:38:40.17",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-01T13:40:58.523",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1508519,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.307981282,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 71,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-04-01T13:38:39.18",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-04-01T13:41:01.483",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1485217,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.296009064,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 18,
+    "comment": "",
+    "id": 70,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T09:55:05.38",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T10:00:04.99",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.4999212,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.5304367,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 69,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T09:54:48.77",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T10:00:16.073",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2932823,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.328054875,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 68,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T09:54:35.49",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T10:00:30.377",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2897854,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.3019677,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 67,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T09:54:33.82",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T10:00:16.053",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1810609,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.1836687,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 66,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T09:54:20.55",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T10:00:30.353",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1850747,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.189260215,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 65,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T09:54:08.26",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T10:00:10.843",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1922365,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.215250447,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 64,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T09:54:07.42",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T10:00:15.803",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1508519,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.208239049,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 63,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T09:54:06.43",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T10:00:10.833",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.09864001,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.2236824,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 62,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T09:54:05.6",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T10:00:30.313",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1485217,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.234370679,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 61,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T08:47:25",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T08:47:44.597",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2351626,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.2686812,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 60,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T08:46:59.59",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T08:47:48.56",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2513207,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.271254838,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 59,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T08:46:57.77",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T08:47:57.847",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2843443,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.328882158,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 58,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T08:46:42.83",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T08:47:54.287",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1221178,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.163254037,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 57,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-30T08:46:41.99",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-30T08:47:50.71",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1314387,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.217902139,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 56,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-25T12:16:28.39",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-25T12:17:58.783",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2513207,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.453306884,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 18,
+    "comment": "",
+    "id": 54,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-25T12:16:27.4",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-25T12:17:49.627",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.9451813,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 3.00167251,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 55,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-25T12:16:27.4",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-25T12:17:55.013",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2351626,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.282972,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 53,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-25T12:16:26.57",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-25T12:18:02.35",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.533478,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 1.31198776,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 52,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-25T10:46:20.41",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-25T10:47:49.467",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.533478,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 1.63128936,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 18,
+    "comment": "",
+    "id": 51,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-25T10:46:19.58",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-25T10:47:41.063",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.9451813,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 1.49842751,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 18,
+    "comment": "",
+    "id": 50,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-22T10:31:12.91",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-22T10:32:26.327",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2056234,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.27970317,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 49,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-22T10:31:12.08",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-22T10:32:38.15",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.06299027,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.251176149,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 18,
+    "comment": "",
+    "id": 47,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-22T10:31:11.25",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-22T10:32:26.31",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1095375,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.251493335,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 20,
+    "comment": "",
+    "id": 48,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-22T10:31:11.25",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-22T10:32:30.277",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.1213636,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.173521891,
+      "unit": "g P"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 46,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-22T10:31:10.41",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-22T10:32:34.017",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.06491853,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.233871132,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 45,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-22T10:31:09.42",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-22T10:32:38.15",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.03387077,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.217362925,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 21,
+    "comment": "",
+    "id": 44,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-22T10:11:49.67",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-22T10:12:34.037",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.0347668,
+      "unit": "gE P"
+    },
+    "source": "Overall",
+    "status": "High Warning",
+    "value": {
+      "id": "trigger",
+      "value": 0.05061207,
+      "unit": "gE P"
+    }
+  },
+  {
+    "title": "",
+    "signature": "Jose Carvalho",
+    "pointID": 22,
+    "comment": "",
+    "id": 43,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-22T10:11:48.68",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-22T10:12:41.203",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.09885366,
+      "unit": "g True Rms"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.299918979,
+      "unit": "g True Rms"
+    }
+  },
+  {
+    "title": "Overall",
+    "signature": "Jose Carvalho",
+    "pointID": 18,
+    "comment": "",
+    "id": 42,
+    "timestamps": [
+      {
+        "id": "created",
+        "value": "2022-03-22T10:11:47.85",
+        "unit": "UTC"
+      },
+      {
+        "id": "acknowledged",
+        "value": "2022-03-22T10:12:46.187",
+        "unit": "UTC"
+      }
+    ],
+    "acknowledged": true,
+    "rule": {
+      "id": "alarm",
+      "value": 0.2056234,
+      "unit": "g P"
+    },
+    "source": "Overall",
+    "status": "High Alarm",
+    "value": {
+      "id": "trigger",
+      "value": 0.6015118,
+      "unit": "g P"
+    }
+  }
+]
