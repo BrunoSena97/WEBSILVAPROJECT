@@ -11,7 +11,7 @@ import "@ui5/webcomponents/dist/Assets.js";
     <AppBar title="WebSilva" />
     <!-- APP CONTENT -->
     <div class="h-[calc(100vh-44px)]">
-      <div class="p-5">
+      <div class="px-12 py-5">
         <RouterView />
       </div>
     </div>

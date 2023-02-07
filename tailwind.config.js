@@ -6,8 +6,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        sapshell: "#354a60"
-      }
+        sapshell: "#354a60",
+        red: "#d73027",
+        orange: "#fc8d59",
+        yellow: "#F6BE00",
+        green: "#91cf60",
+        greener: "#1a9850",
+      },
     },
   },
   screens: {

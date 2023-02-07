@@ -1,35 +1,33 @@
 <template>
-  <Line :data="data" :options="options" />
+  <Bar :data="data" :options="options" />
 </template>
 
 <script>
 import {
   Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
   Title,
   Tooltip,
   Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale,
 } from "chart.js";
-import {Line} from "vue-chartjs";
-import * as chartConfig from "./trendChartConfig";
+import { Bar } from "vue-chartjs";
+import * as chartConfig from "./tempBar.js";
 
 ChartJS.register(
   CategoryScale,
   LinearScale,
-  PointElement,
-  LineElement,
+  BarElement,
   Title,
   Tooltip,
   Legend
 );
 
 export default {
-  name: "App",
+  name: "TemperatureBar",
   components: {
-    Line,
+    Bar,
   },
   data() {
     return chartConfig;

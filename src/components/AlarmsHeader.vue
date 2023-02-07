@@ -1,25 +1,21 @@
-<script>
+<script setup>
 import "@ui5/webcomponents/dist/TabContainer";
 import "@ui5/webcomponents/dist/Tab";
 import "@ui5/webcomponents/dist/TabSeparator";
 
-export default {
-  name: "AlarmsHeader",
-  props: {
-    alarms: { type: Array },
-    knownCount: { type: Number, default: 0 },
-    unkownCount: { type: Number, default: 0 },
-    warningCount: { type: Number, default: 0 },
-    alarmCount: { type: Number, default: 0 },
-  },
-  data: function () {
-    return {};
-  },
-};
+const props = defineProps({
+  alarms: { type: Array },
+  knownCount: { type: Number, default: 0 },
+  unknownCount: { type: Number, default: 0 },
+  warningCount: { type: Number, default: 0 },
+  alarmCount: { type: Number, default: 0 },
+});
 </script>
 
 <template>
-  <header class="bg-white border rounded-xl  divide-y divide-solid divide-gray-400 shadow-lg">
+  <header
+    class="bg-white border rounded-xl divide-y divide-solid divide-gray-400 shadow-lg"
+  >
     <div class="h-14 flex items-center ml-5">
       <ui5-title level="H3">Alarms</ui5-title>
     </div>
@@ -35,31 +31,31 @@ export default {
         <ui5-tab
           data-filter-type="All"
           text="All Alarms"
-          :additional-text="alarms.length"
+          :additional-text="props.alarms.length"
         ></ui5-tab>
         <ui5-tab-separator></ui5-tab-separator>
         <ui5-tab
           data-filter-type="Aknowledged"
           text="Aknowledged"
-          :additional-text="knownCount"
+          :additional-text="props.knownCount"
         ></ui5-tab>
         <ui5-tab-separator></ui5-tab-separator>
         <ui5-tab
           data-filter-type="Unaknowledged"
           text="Unaknowledged"
-          :additional-text="unkownCount"
+          :additional-text="props.unknownCount"
         ></ui5-tab>
         <ui5-tab-separator></ui5-tab-separator>
         <ui5-tab
           data-filter-type="Warnings"
           text="Warnings"
-          :additional-text="warningCount"
+          :additional-text="props.warningCount"
         ></ui5-tab>
         <ui5-tab-separator></ui5-tab-separator>
         <ui5-tab
           data-filter-type="Alarms"
           text="Alarms"
-          :additional-text="alarmCount"
+          :additional-text="props.alarmCount"
         ></ui5-tab>
       </ui5-tabcontainer>
     </div>

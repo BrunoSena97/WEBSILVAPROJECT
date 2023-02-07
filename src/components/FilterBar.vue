@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import "@ui5/webcomponents-icons/dist/excel-attachment.js";
 import "@ui5/webcomponents-icons/dist/sort-ascending.js";
 import "@ui5/webcomponents-icons/dist/sort-descending.js";
@@ -6,15 +6,12 @@ import "@ui5/webcomponents-icons/dist/search.js";
 import "@ui5/webcomponents-icons/dist/filter.js";
 import "@ui5/webcomponents/dist/Input.js";
 
-export default {
-  name: "FilterBar",
-  props: {
-    filterType: {
-      type: String,
-      default: "All",
-    },
+const props = defineProps({
+  filterType: {
+    type: String,
+    default: "All",
   },
-};
+});
 </script>
 
 <template>
@@ -23,7 +20,7 @@ export default {
     class="flex flex-wrap justify-between bg-white rounded-md align-middle bg-gray-100"
   >
     <div class="flex flex-auto justify-start items-center ml-3">
-      <ui5-title level="H3">{{ filterType }}</ui5-title>
+      <ui5-title level="H3">{{ props.filterType }}</ui5-title>
     </div>
     <div
       class="flex flex-auto justify-end p-1.5 max-w-100% flex-wrap mr-1 last:mr-0"

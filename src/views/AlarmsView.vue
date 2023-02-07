@@ -1,388 +1,346 @@
 <!-- eslint-disable no-undef -->
 
-<script >
+<script setup>
 import AlarmsHeader from "../components/AlarmsHeader.vue";
-import alarms from "../data/alarms.json";
-import points from "../data/points.json";
-import machines from "../data/machines.json";
 import FilterBar from "../components/FilterBar.vue";
-import trendChart from "../components/trendChart.vue";
+import { ref } from "vue";
+import { useGeneralStore } from "@/stores/generalStore";
+import { storeToRefs } from "pinia";
 import "@ui5/webcomponents/dist/Title";
 import "@ui5/webcomponents/dist/Badge";
 import "@ui5/webcomponents-fiori/dist/FlexibleColumnLayout.js";
 import "@ui5/webcomponents-icons/dist/full-screen.js";
 import "@ui5/webcomponents-icons/dist/shipping-status.js";
+import { toRaw } from "vue";
+const generalStore = useGeneralStore();
+const { alarms, points, machines } = storeToRefs(generalStore);
 
-export default {
-  name: "AlarmsView",
-  data: function () {
-    return {
-      alarms: [...alarms],
-      filteredAlarms: [...alarms],
-      points: [...points],
-      machines: [...machines],
-      filterType: "All",
-      currentAlarm: null,
-      currentAlarmType: null,
-      currentAlarmCreated: null,
-      currentAlarmAknowledged: null,
-      trend: Boolean,
-      currentIsAcknowledged: Boolean,
-      currentPointID: null,
-      currentPoint: null,
-      currentMachine: null,
-      currentMachineID: null,
-      currentTempDeviation: null,
+const alarmsList = ref(alarms);
+const filteredAlarms = ref(alarms);
+const pointsList = ref(points);
+const machinesList = ref(machines);
+const filterType = ref("All");
+const currentAlarm = ref(null);
+const currentAlarmType = ref(null);
+const currentAlarmCreated = ref(null);
+const currentAlarmAknowledged = ref(null);
+const trend = ref(Boolean);
+const currentIsAcknowledged = ref(Boolean);
+const currentPointID = ref(null);
+const currentPoint = ref(null);
+const currentMachine = ref(null);
+const currentMachineID = ref(null);
+const currentDeviation = ref(null);
+const statusCriteriaMapping = ref({
+  "High Warning": 0,
+  "Low Warning": 1,
+  "High Alarm": 2,
+  "Low Alarm": 3,
+});
 
-      statusCriteriaMapping: {
-        "High Warning": 0,
-        "Low Warning": 1,
-        "High Alarm": 2,
-        "Low Alarm": 3,
-      },
-    };
-  },
-  methods: {
-    setCurrentAlarm(item) {
-      let type = this.getType(item);
-      this.currentAlarm = item;
-      this.currentAlarmType = type;
-      this.currentIsAcknowledged = item.acknowledged;
-      this.currentPointID = item.pointID;
-      this.currentAlarmCreated = item.timestamps[0].value;
-      this.currentAlarmAknowledged = item.timestamps[1].value;
+function setCurrentAlarm(item) {
+  console.log("this is the Current Alarm:", item);
+  let type = getType(item);
+  console.log("this is the type:", type);
+  currentAlarm.value = item;
+  console.log("this is the current alarm:", currentAlarm.value);
+  currentAlarmType.value = type;
+  console.log("this is the type value:", currentAlarmType.value);
+  currentIsAcknowledged.value = item.acknowledged;
+  console.log("this is the if aknowledged:", currentIsAcknowledged.value);
+  currentPointID.value = item.pointID;
+  console.log("this is the Current Point:", currentPointID.value);
+  currentAlarmCreated.value = item.timestamps[0].value;
+  console.log("this is the alarm created date:", currentAlarmCreated.value);
+  currentAlarmAknowledged.value = item.timestamps[1].value;
+  console.log("this is the alarm aknowledged date:", currentAlarmAknowledged.value);
 
-      if (type === "Temperature") {
-        this.trend = true;
-      } else this.trend = false;
-      this.currentPoint = this.points.filter(
-        (item) => item.ID === this.currentPointID
-      );
-      this.currentMachineID = this.currentPoint.MachineID;
-      this.currentMachine = this.machines.filter(
-        (item) => item.ID === this.currentMachineID
-      );
-      this.currentTempDeviation = item.value.value - item.rule.value;
-      if (this.currentTempDeviation < 0) {
-        this.currentTempDeviation *= -1;
-      }
-    },
+  if (type === "Temperature") {
+    trend.value = true;
+  } else trend.value = false;
 
-    getType(item) {
-      let rule = item.rule.unit;
-      let type = null;
-      if (rule === "C") {
-        type = "Temperature";
-      } else type = "Vibration";
-      return type;
-    },
+  currentDeviation.value = item.value.value - item.rule.value;
+  if (currentDeviation.value < 0) {
+    currentDeviation.value *= -1;
+  }
+  setCurrentPoint(currentPointID.value);
+  setCurrentMachine(currentMachineID.value);
+}
 
-    getState(item) {
-      let additionalText = item;
-      if (additionalText) {
-        additionalText = "Aknowledged";
-      } else additionalText = "Unacknowledged";
-      return additionalText;
-    },
-    getStateColor(item) {
-      let atState = "";
-      if (item) {
-        atState = "Success";
-      } else atState = "Error";
-      return atState;
-    },
-    getTextColor(type) {
-      switch (type) {
-        case "High Warning":
-          return "bold text-red-900  bg-opacity-50";
-        case "Low Warning":
-          return "bold text-yellow-500  bg-opacity-50";
-        case "High Alarm":
-          return "bold text-orange-600  bg-opacity-50";
-        case "Low Alarm":
-          return "bold text-pink-400  bg-opacity-50";
-        case "True":
-          return "bold text-green-600";
-        case "False":
-          return "bold text-red-600";
-        default:
-          return "0";
-      }
-    },
-    getbgColor(type) {
-      switch (type) {
-        case "High Warning":
-          return "bg-red-100";
-        case "Low Warning":
-          return "bg-yellow-100";
-        case "High Alarm":
-          return "bg-orange-100";
-        case "Low Alarm":
-          return "bg-pink-100";
-        default:
-          return "bg-white";
-      }
-    },
-    sortAsc() {
-      const sortedItems = this.filteredAlarms.sort((a, b) => {
-        if (
-          this.statusCriteriaMapping[a.status] >
-          this.statusCriteriaMapping[b.status]
-        ) {
-          return 1;
-        } else if (
-          this.statusCriteriaMapping[a.status] <
-          this.statusCriteriaMapping[b.status]
-        ) {
-          return -1;
-        } else return 0;
-      });
-      this.filteredAlarms = sortedItems;
-    },
-    sortDesc() {
-      const sortedItems = this.filteredAlarms.sort((a, b) => {
-        if (
-          this.statusCriteriaMapping[a.status] >
-          this.statusCriteriaMapping[b.status]
-        ) {
-          return -1;
-        } else if (
-          this.statusCriteriaMapping[a.status] <
-          this.statusCriteriaMapping[b.status]
-        ) {
-          return 1;
-        } else return 0;
-      });
+function setCurrentPoint(currentPointID) {
+  const flatPoints = Object.values(pointsList.value).flat();
+  console.log("This is the raw value of the pointsList point:", toRaw(pointsList.value));
+  console.log("This is the value of the pointsList point:", pointsList.value);
+  console.log("This is the  TYPEOF pointsList point:", typeof toRaw(pointsList.value));
+  console.log("This is the pointsList after toRaw Object.Values:", flatPoints);
+  currentPoint.value = flatPoints.find(point => point.ID === currentPointID);
+  console.log("This is the value of the current Point:", currentPoint.value);
+  currentMachineID.value = currentPoint.value.MachineID;
+  console.log("This is the value of the current machine id:", currentMachineID.value);
+}
 
-      this.filteredAlarms = sortedItems;
-    },
+function setCurrentMachine() {
+  console.log("This is the value of the Machine List:", machinesList.value);
+  console.log("This is the raw value of the Machine List:", toRaw(machinesList.value));
+  console.log("This is the typeOf of the Machine List:", toRaw(machinesList.value));
 
-    filterVisibleItemsBySearch(search) {
-      const filteredByType = this.filterItems(this.filterType, this.alarms); //filter alarms based on current filter type
-      const items = filteredByType.filter((item) =>
-        item.status.toLowerCase().startsWith(search)
-      ); // filter items based on search
+  machinesList.value.forEach((machine) => {
+    console.log("This is the value of the Machine id:", machine.id);
+    console.log("This is the value of the Machine name", machine.name);
+    if (machine.id === currentMachineID.value) {
+      currentMachine.value = machine;
+    }
+    console.log("This is the Current Machine value", toRaw(currentMachine.value));
+  });
+}
 
-      this.filteredAlarms = items;
-    },
+function getType(item) {
+  let rule = item.rule.unit;
+  let type = null;
+  if (rule === "C") {
+    type = "Temperature";
+  } else type = "Vibration";
+  return type;
+}
 
-    filter(value) {
-      this.filterVisibleItemsBySearch(value);
-    },
+function getState(item) {
+  let additionalText = item;
+  if (additionalText) {
+    additionalText = "Aknowledged";
+  } else additionalText = "Unacknowledged";
+  return additionalText;
+}
 
-    filterknownAlarms(items) {
-      return items.filter((alarm) => alarm.acknowledged);
-    },
+function getStateColor(item) {
+  let atState = "";
+  if (item) {
+    atState = "Success";
+  } else atState = "Error";
+  return atState;
+}
 
-    filterUnknownAlarms(items) {
-      return items.filter((alarm) => !alarm.acknowledged);
-    },
+function getTextColor(type) {
+  switch (type) {
+    case "High Warning":
+      return "bold text-red  bg-opacity-50";
+    case "Low Warning":
+      return "bold text-yellow  bg-opacity-50";
+    case "High Alarm":
+      return "bold text-orange  bg-opacity-50";
+    case "Low Alarm":
+      return "bold text-pink-400  bg-opacity-50";
+    case "True":
+      return "bold text-green";
+    case "False":
+      return "bold text-red";
+    default:
+      return "0";
+  }
+}
 
-    filterWarningAlarms(items) {
-      return items.filter((alarm) => alarm.status.includes("Warning"));
-    },
-    filterAlarmsAlarms(items) {
-      return items.filter((alarm) => alarm.status.includes("Alarm"));
-    },
-    applyFilter(filterType) {
-      const alarms = this.filterItems(filterType, this.alarms);
-      this.filteredAlarms = alarms;
-      this.filterType = filterType;
-    },
+function sortAsc() {
+  const sortedItems = filteredAlarms.value.sort((a, b) => {
+    if (
+      statusCriteriaMapping.value[a.status] >
+      statusCriteriaMapping.value[b.status]
+    ) {
+      return 1;
+    } else if (
+      statusCriteriaMapping.value[a.status] <
+      statusCriteriaMapping.value[b.status]
+    ) {
+      return -1;
+    } else return 0;
+  });
+  filteredAlarms.value = sortedItems;
+}
+function sortDesc() {
+  const sortedItems = filteredAlarms.value.sort((a, b) => {
+    if (
+      statusCriteriaMapping.value[a.status] >
+      statusCriteriaMapping.value[b.status]
+    ) {
+      return -1;
+    } else if (
+      statusCriteriaMapping.value[a.status] <
+      statusCriteriaMapping.value[b.status]
+    ) {
+      return 1;
+    } else return 0;
+  });
+  filteredAlarms.value = sortedItems;
+}
+function filterVisibleItemsBySearch(search) {
+  const filteredByType = filterItems(filterType.value, alarmsList.value); //filter alarms based on current filter type
+  const items = filteredByType.filter((item) =>
+    item.status.toLowerCase().startsWith(search)
+  ); // filter items based on search
 
-    filterItems(filterType, items) {
-      // eslint-disable-next-line prettier/prettier
-      let filteredAlarms = [];
+  filteredAlarms.value = items;
+}
+function filter(value) {
+  filterVisibleItemsBySearch(value);
+}
 
-      switch (filterType) {
-        case "All":
-          filteredAlarms = items;
-          break;
-        case "Aknowledged":
-          filteredAlarms = this.filterknownAlarms(items);
-          break;
-        case "Unaknowledged":
-          filteredAlarms = this.filterUnknownAlarms(items);
-          break;
-        case "Warnings":
-          filteredAlarms = this.filterWarningAlarms(items);
-          break;
-        case "Alarms":
-          filteredAlarms = this.filterAlarmsAlarms(items);
-          break;
-        default:
-          filteredAlarms = items;
-          break;
-      }
+function filterknownAlarms(items) {
+  return items.filter((alarm) => alarm.acknowledged);
+}
 
-      return filteredAlarms;
-    },
-    showMidColumn() {
-      fcl.layout = "TwoColumnsMidExpanded";
-    },
+function filterUnknownAlarms(items) {
+  return items.filter((alarm) => !alarm.acknowledged);
+}
 
-    closeMidColumn() {
-      fcl.layout = "OneColumn";
-    },
+function filterWarningAlarms(items) {
+  return items.filter((alarm) => alarm.status.includes("Warning"));
+}
+function filterAlarmsAlarms(items) {
+  return items.filter((alarm) => alarm.status.includes("Alarm"));
+}
+function applyFilter(type) {
+  const alarms = filterItems(type, alarmsList.value);
+  filteredAlarms.value = alarms;
+  filterType.value = type;
+}
 
-    fullscreenMidColumn() {
-      fcl.layout = "MidColumnFullScreen";
-    },
-  },
-  components: { AlarmsHeader, FilterBar, trendChart },
-};
+function filterItems(type, items) {
+  // eslint-disable-next-line prettier/prettier
+  let filteredAlarms = [];
+
+  switch (type) {
+    case "All":
+      filteredAlarms = items;
+      break;
+    case "Aknowledged":
+      filteredAlarms = filterknownAlarms(items);
+      break;
+    case "Unaknowledged":
+      filteredAlarms = filterUnknownAlarms(items);
+      break;
+    case "Warnings":
+      filteredAlarms = filterWarningAlarms(items);
+      break;
+    case "Alarms":
+      filteredAlarms = filterAlarmsAlarms(items);
+      break;
+    default:
+      filteredAlarms = items;
+      break;
+  }
+
+  return filteredAlarms;
+}
+function showMidColumn() {
+  fcl.layout = "TwoColumnsMidExpanded";
+}
+
+function closeMidColumn() {
+  fcl.layout = "OneColumn";
+}
+
+function fullscreenMidColumn() {
+  fcl.layout = "MidColumnFullScreen";
+}
 </script>
 
 <template>
   <!-- eslint-disable vue/no-deprecated-slot-attribute -->
   <div class="h-full">
     <div class="p-3">
-      <AlarmsHeader
-        :alarms="alarms"
-        :knownCount="filterknownAlarms(alarms).length"
-        :unknownCount="filterUnknownAlarms(alarms).length"
-        :warningCount="filterWarningAlarms(alarms).length"
-        :alarmCount="filterAlarmsAlarms(alarms).length"
-        @tabPress="applyFilter"
-      />
+      <AlarmsHeader :alarms="alarmsList" :knownCount="filterknownAlarms(alarmsList).length"
+        :unknownCount="filterUnknownAlarms(alarmsList).length" :warningCount="filterWarningAlarms(alarmsList).length"
+        :alarmCount="filterAlarmsAlarms(alarmsList).length" @tabPress="applyFilter" />
     </div>
     <main class="p-3">
       <div class="flex-1 h-[70vh]">
         <ui5-flexible-column-layout class="h-[70vh] shadow-xl" id="fcl">
           <div slot="startColumn">
-            <FilterBar
-              :filterType="filterType"
-              class="border border-gray-300"
-              @filter="filter"
-              @sortAsc="sortAsc"
-              @sortDesc="sortDesc"
-            />
+            <FilterBar :filterType="filterType" class="border border-gray-300" @filter="filter" @sortAsc="sortAsc"
+              @sortDesc="sortDesc" />
             <ui5-list no-data-text="No Data Available" id="col1list">
-              <ui5-li
-                v-for="item of filteredAlarms"
-                icon="slim-arrow-right"
-                icon-end
-                :key="item.id"
-                :description="`Type: ${getType(item)}`"
-                :additional-text="getState(item.acknowledged)"
+              <ui5-li v-for="item of filteredAlarms" icon="slim-arrow-right" icon-end :key="item.id"
+                :description="`Date: ${item.timestamps[0].value}`" :additional-text="getState(item.acknowledged)"
                 :additional-text-state="getStateColor(item.acknowledged)"
-                class="`border border-gray-200 bg-opacity-30 rounded-md"
-                @click="
-                  showMidColumn();
-                  setCurrentAlarm(item);
-                "
-                >Status:
-                <span :class="getTextColor(item.status)">{{
-                  item.status
-                }}</span>
+                class="border border-gray-200 bg-opacity-30 rounded-md" @click="
+  showMidColumn();
+setCurrentAlarm(item);
+                ">Status:
+                <span :class="getTextColor(item.status)">
+                  {{ item.status }}
+                </span>
+                |
+                <span :class="getTextColor(item.status)">
+                  {{ getType(item) }}
+                </span>
               </ui5-li>
             </ui5-list>
           </div>
 
           <div v-if="currentAlarm && currentPoint" slot="midColumn">
-            <div
-              class="flex flex-row mx-3 h-[50px] border rounded-md shadow justify-start border"
-            >
-              <div
-                class="flex basis-3/4 justify-start items-baseline ml-5 mt-2"
-              >
-                <ui5-title class="basis-1" level="H2"
-                  >Alarm ID: {{ currentAlarm.id }}</ui5-title
-                >
-                <!--                 <ui5-title class="basis-1/6" level="H5"
-                  >Type: {{ currentAlarmType }}</ui5-title
-                >
-                <ui5-title class="basis-1/6" level="H5"
-                  >Status: {{ currentAlarm.status }}</ui5-title
-                > -->
+            <div class="flex flex-row mx-3 h-[50px] border rounded-md shadow justify-start border">
+              <div class="flex basis-3/4 justify-start items-baseline ml-5 mt-2">
+                <ui5-title class="basis-1" level="H2">Alarm ID: {{ currentAlarm.id }}</ui5-title>
               </div>
               <div class="">
-                <ui5-button
-                  id="fullscreenMidColumn"
-                  design="Transparent"
-                  icon="full-screen"
-                  title="Enter Fullscreen"
-                  @click="fullscreenMidColumn"
-                ></ui5-button>
-                <ui5-button
-                  @click="closeMidColumn"
-                  id="closeMidColumn"
-                  icon="decline"
-                  design="Transparent"
-                  title="Close Tab"
-                ></ui5-button>
+                <ui5-button id="fullscreenMidColumn" design="Transparent" icon="full-screen" title="Enter Fullscreen"
+                  @click="fullscreenMidColumn"></ui5-button>
+                <ui5-button @click="closeMidColumn" id="closeMidColumn" icon="decline" design="Transparent"
+                  title="Close Tab"></ui5-button>
               </div>
             </div>
             <!-- ColBody -->
-            <div
-              class="grid grid-cols-2 grid-rows-2 gap-5 p-3 m-3 border rounded-md h-[60vh]"
-            >
+            <div class="grid grid-cols-2 grid-rows-2 gap-5 p-3 m-3 border rounded-md h-[60vh]">
               <!-- Card Common Header -->
               <div class="bg-white rounded-md flex p-3 shadow-md">
                 <ui5-list header-text="Alarm Information">
                   <ui5-li class="border-t">Type: {{ currentAlarmType }}</ui5-li>
-                  <ui5-li class="border-t"
-                    >Created: {{ currentAlarmCreated }}
+                  <ui5-li class="border-t">Created: {{ currentAlarmCreated }}
                   </ui5-li>
-                  <ui5-li v-show="currentIsAcknowledged" class="border-t"
-                    >Aknowledged: {{ currentAlarmAknowledged }}
+                  <ui5-li v-show="currentIsAcknowledged" class="border-t">Aknowledged: {{ currentAlarmAknowledged }}
                   </ui5-li>
-                  <ui5-li v-show="currentIsAcknowledged" class="border-t"
-                    >Aknowledged by: {{ currentAlarm.signature }}
+                  <ui5-li id="unak" v-show="!currentIsAcknowledged" class="border-t">UNAKNOWLEDGED
+                  </ui5-li>
+                  <ui5-li v-show="currentIsAcknowledged" class="border-t">Aknowledged by: {{ currentAlarm.signature }}
                   </ui5-li>
                 </ui5-list>
               </div>
               <div class="bg-white rounded-md flex p-3 shadow-md">
                 <ui5-list header-text="Point Information">
-                  <ui5-li class="border-t"
-                    >Machine: {{ currentMachine[0].name }}</ui5-li
-                  >
-                  <ui5-li class="border-t"
-                    >Point: {{ currentPoint[0].Name }}</ui5-li
-                  >
-                  <ui5-li class="border-t"
-                    >Description: {{ currentPoint[0].Description }}</ui5-li
-                  >
-                  <ui5-li v-if="trend" class="border-t">{{
-                    currentPoint[0].OverallAlarm.Summary
+                  <ui5-li class="border-t">Machine: {{ currentMachine.name }}</ui5-li>
+                  <ui5-li class="border-t">Point: {{ currentPoint.Name }}</ui5-li>
+                  <ui5-li class="border-t">Description: {{ currentPoint.Description }}</ui5-li>
+                  <ui5-li v-if="trend" class="border-t">Type: {{
+                    currentPoint.OverallAlarm.TypeName
                   }}</ui5-li>
-                  <ui5-li v-if="!trend" class="border-t"
-                    >Warning:
-                    {{ currentPoint[0].Frequencies[0].WarningLevel }} Alarm:
-                    {{ currentPoint[0].Frequencies[0].AlarmLevel }}</ui5-li
-                  >
+                  <ui5-li v-if="!trend" class="border-t">Warning:
+                    {{ currentPoint.Frequencies[0].WarningLevel }} Alarm:
+                    {{ currentPoint.Frequencies[0].AlarmLevel }}</ui5-li>
                 </ui5-list>
               </div>
-              <div
-                class="p-3 bg-white col-span-2 rounded-md shadow-md"
-              >
-              <!-- Alarm Values if Trend -->
+              <div class="p-3 bg-white col-span-2 rounded-md shadow-md">
+                <!-- Alarm Values if Trend -->
                 <div class="flex flex-row" v-show="trend">
                   <div class="basis-1/3">
                     <ui5-list header-text="Point Values">
-                      <ui5-li class="border-t"
-                        >Alarm Value: {{ currentAlarm.value.value }} ℃</ui5-li
-                      >
-                      <ui5-li class="border-t"
-                        >Deviation: {{ currentTempDeviation }} ℃</ui5-li
-                      >
-                      <ui5-li class="border-t"
-                        >Source: {{ currentAlarm.source }}</ui5-li
-                      >
-                      <ui5-li v-if="!trend" class="border-t"
-                        >Warning:
-                        {{ currentPoint[0].Frequencies[0].WarningLevel }} Alarm:
-                        {{ currentPoint[0].Frequencies[0].AlarmLevel }}</ui5-li
-                      >
+                      <ui5-li class="border-t">Alarm Value: {{ currentAlarm.value.value }} ℃</ui5-li>
+                      <ui5-li class="border-t">Deviation: {{ currentDeviation }} ℃</ui5-li>
+                      <ui5-li class="border-t">Source: {{ currentAlarm.source }}</ui5-li>
                     </ui5-list>
                   </div>
                   <!-- TRENDCHART -->
-                  <div class="basis-2/3">
-                    <trendChart />
-                  </div>
+                  <div class="basis-2/3"></div>
                 </div>
                 <!-- Alarm Values if Dynamic -->
-                <div v-show="!trend">this is dynamic</div>
+                <div class="flex flex-row" v-show="!trend">
+                  <div class="basis-1/3">
+                    <ui5-list header-text="Point Values">
+                      <ui5-li class="border-t">Alarm Value: {{ currentAlarm.value.value }}g P</ui5-li>
+                      <ui5-li class="border-t">Deviation: {{ currentDeviation }} g P</ui5-li>
+                      <ui5-li class="border-t">Source: {{ currentAlarm.source }}</ui5-li>
+                    </ui5-list>
+                  </div>
+                  <!-- TRENDCHART -->
+                  <div class="basis-2/3"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -391,3 +349,9 @@ export default {
     </main>
   </div>
 </template>
+
+<style>
+#unak::part(title) {
+  color: red;
+}
+</style>
