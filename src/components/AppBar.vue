@@ -54,7 +54,7 @@ const props = defineProps({
       <img slot="logo" :src="props.logo" />
       <ui5-avatar slot="profile"></ui5-avatar>
     </ui5-shellbar>
-    <ui5-shellbar v-if="!isAuthenticated" :primary-title="props.title">
+    <ui5-shellbar v-if="!isAuthenticated" :primary-title="props.title" @logo-click="goHome">
       <img slot="logo" :src="props.logo" />
     </ui5-shellbar>
 

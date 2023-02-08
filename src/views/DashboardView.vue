@@ -12,7 +12,6 @@ import { storeToRefs } from "pinia";
 import { ref, computed } from "vue";
 import machinePoints from "../data/machinepoints.json";
 import machines from "../data/machines.json";
-import ListComponent from "../components/ListComponent.vue";
 import { onMounted } from "vue";
 import { useGeneralStore } from "@/stores/generalStore";
 const generalStore = useGeneralStore();
@@ -246,42 +245,43 @@ onMounted(async () => {
   <div v-if="!loading">
     <!-- eslint-disable vue/no-deprecated-slot-attribute -->
     <!-- Page Title -->
-    <div class="h-10 flex flex-row justify-center w-">
+    <div class="h-10 flex flex-row justify-center">
       <ui5-title level="H2">General Report</ui5-title>
     </div>
     <!-- Grid Container -->
-    <div class="h-[80vh] grid grid-cols-1 grid-rows-4 gap-5 lg:grid-cols-9">
+    <div class="h-[80vh] grid grid-cols-2 md:grid-cols-6 lg:grid-cols-9 lg:grid-rows-4 gap-5">
       <!-- Card6 - Total Alarms Count -->
-      <div class="bg-white rounded-md shadow-xl col-start-2">
+      <div class="bg-white rounded-md order-1 shadow-xl md:col-start-2 lg:col-start-2">
         <RouterLink to="/alarms">
           <!-- Grid Container -->
           <div class="h-full p-4 grid grid-cols-2 grid-rows-2 hover:cursor-pointer">
             <!-- Header -->
             <div class="col-span-2 row-span-1 justify-self-start mx-3">
               <ui5-title class="" level="H4">Alarms</ui5-title>
-              <ui5-title class="opacity-80" level="H6">Total </ui5-title>
+              <ui5-title class="opacity-80 s" level="H6">Total </ui5-title>
             </div>
             <!-- BODY -->
             <!-- VALUE -->
-            <div class="col-span-2 row-span-1 row-start-2 flex flex-row justify-around mx-2">
-              <p class="text-yellow text-6xl opacity-80">
+            <div class="col-span-2 row-span-1 row-start-2 flex flex-row justify-around md:mx-2">
+              <p class="text-yellow text-5xl md:text-6xl opacity-80 ">
                 {{ alarmsCount }}
               </p>
               <!-- ICON -->
-              <div class="mt-1.5">
-                <ui5-icon name="alert" class="h-[3.75rem] w-10 opacity-50" />
+              <div class="md:mt-1.5 mt-3">
+                <ui5-icon name="alert" class="h-[1.875rem] w-5 md:h-[3.75rem] md:w-10 opacity-50" />
               </div>
             </div>
           </div>
         </RouterLink>
       </div>
       <!-- Card1 - New Alarms Count -->
-      <div class="bg-white rounded-md shadow-xl col-start-1 row-start-1">
+      <div
+        class="bg-white rounded-md shadow-xl order-first md:col-start-1 md:row-start-1 lg:col-start-1 lg:row-start-1">
         <RouterLink to="/alarms">
           <!-- Grid Container -->
           <div class="h-full p-4 grid grid-cols-2 grid-rows-2 hover:cursor-pointer">
             <!-- Header -->
-            <div class="col-span-2 row-span-1 justify-self-start mx-3">
+            <div class="col-span-2 row-span-1 justify-self-start lg:mx-3">
               <ui5-title class="" level="H4">New Alarms </ui5-title>
               <ui5-title class="opacity-80" level="H6">Unacknowledged
               </ui5-title>
@@ -289,22 +289,23 @@ onMounted(async () => {
             <!-- BODY -->
             <!-- VALUE -->
             <div class="col-span-2 row-span-1 row-start-2 flex flex-row justify-around mx-2">
-              <p v-if="unakCount == 0" class="text-6xl opacity-80 text-greener">
+              <p v-if="unakCount == 0" class="text-5xl md:text-6xl opacity-80 text-greener">
                 {{ unakCount }}
               </p>
-              <p v-if="unakCount != 0" class="text-6xl opacity-80 text-red">
+              <p v-if="unakCount != 0" class="text-5xl md:text-6xl text-red">
                 {{ unakCount }}
               </p>
               <!-- ICON -->
-              <div class="mt-1.5">
-                <ui5-icon name="alert" class="h-[3.75rem] w-10 opacity-50" />
+              <div class="mt-3 md:mt-1.5">
+                <ui5-icon name="alert" class="h-[1.875rem] w-5 md:h-[3.75rem] md:w-10 opacity-50" />
               </div>
             </div>
           </div>
         </RouterLink>
       </div>
       <!-- Card2 - Total Alarms -->
-      <div class="bg-white rounded-md shadow-xl row-start-2 col-span-3 row-span-2">
+      <div
+        class="bg-white rounded-md shadow-xl order-6 col-span-2 md:row-start-2 md:col-span-3 md:row-span-2 lg:row-start-2 lg:col-span-3 lg:row-span-2">
         <!-- Grid Container -->
         <div class="grid grid-cols-2 grid-rows-2 align-center h-full p-4">
           <!-- BODY -->
@@ -321,16 +322,13 @@ onMounted(async () => {
         </div>
       </div>
       <!-- Card3 - Machine N -->
-      <div class="bg-white rounded-md shadow-xl row-start-2 col-span-3 row-span-2">
+      <div
+        class="bg-white rounded-md shadow-xl order-7 col-span-2 md:row-start-2 md:col-span-3 md:row-span-2 lg:row-start-2 lg:col-span-3 lg:row-span-2 h-[100%]">
         <!-- Grid Container -->
-        <div class="grid grid-cols-2 grid-rows-2 align-center h-full p-4">
+        <div class="grid grid-cols-2 grid-rows-2 align-center h-full p-4 h-[100%]">
           <!-- BODY -->
-          <div class="col-span-1"></div>
-          <div class="col-span-1 row-start-1">
-            <ListComponent :list-title="listC3ListTitle" :list-items="listC3ListItem" />
-          </div>
-          <div class="col-span-2 row-start-1">
-            <ui5-list id="myList" header-text="Moinho Secundário">
+          <div class="col-span-1 row-span-2 row-start-1">
+            <ui5-list id="myList" growing="Scroll" header-text="Moinho Primário" class="h-[100%]">
               <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 1
                 Temp</ui5-li>
               <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 2
@@ -338,34 +336,62 @@ onMounted(async () => {
               <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 3 g
                 P</ui5-li>
               <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 4
-                Temp</ui5-li>
+              </ui5-li>
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 5
+              </ui5-li>
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 6
+              </ui5-li>
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 7
+              </ui5-li>
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 8</ui5-li>
+            </ui5-list>
+          </div>
+          <div class="col-span-2 row-span-2 row-start-1">
+            <ui5-list id="myList" growing="Scroll" header-text="Moinho Secundário" class="h-[100%]">
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 1
+              </ui5-li>
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 2
+              </ui5-li>
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 3
+              </ui5-li>
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 4
+              </ui5-li>
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 5
+              </ui5-li>
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 6
+              </ui5-li>
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 7
+              </ui5-li>
+              <ui5-li class="border-b border-gray-200 bg-opacity-30 rounded-md" icon="circle-task-2">Sensor 8</ui5-li>
             </ui5-list>
           </div>
           <div class="col-span-2 row-start-2"></div>
         </div>
       </div>
       <!-- Card 4 Machines -->
-      <div class="bg-white rounded-md shadow-xl col-start-5 row-start-1">
-        <!-- Grid Container -->
-        <div class="h-full p-4 grid grid-cols-2 grid-rows-2 hover:cursor-pointer">
-          <!-- Header -->
-          <div class="col-span-2 row-span-1 justify-self-start mx-3">
-            <ui5-title class="" level="H4">Machines</ui5-title>
-            <ui5-title class="opacity-80" level="H6">Total</ui5-title>
-          </div>
-          <!-- BODY -->
-          <!-- VALUE -->
-          <div class="col-span-2 row-span-1 row-start-2 flex flex-row justify-around text-greener">
-            <p class="text-6xl opacity-80">{{ machineCount }}</p>
-            <!-- ICON -->
-            <div class="mt-1.5">
-              <ui5-icon name="machine" class="h-[3.75rem] w-10 opacity-50" />
+      <div class="bg-white rounded-md shadow-xl order-4 md:col-start-4 lg:col-start-5 lg:row-start-1">
+        <RouterLink to="/machines">
+          <!-- Grid Container -->
+          <div class="h-full p-4 grid grid-cols-2 grid-rows-2 hover:cursor-pointer">
+            <!-- Header -->
+            <div class="col-span-2 row-span-1 justify-self-start md:mx-3">
+              <ui5-title class="" level="H4">Machines</ui5-title>
+              <ui5-title class="opacity-80" level="H6">Total</ui5-title>
+            </div>
+            <!-- BODY -->
+            <!-- VALUE -->
+            <div class="col-span-2 row-span-1 row-start-2 flex flex-row justify-around text-greener">
+              <p class="text-5xl md:text-6xl opacity-80">{{ machineCount }}</p>
+              <!-- ICON -->
+              <div class="mt-3 md:mt-1.5">
+                <ui5-icon name="machine" class="h-[1.875rem] w-5 md:h-[3.75rem] md:w-10 opacity-50" />
+              </div>
             </div>
           </div>
-        </div>
+        </RouterLink>
       </div>
       <!-- Card 5 Notes -->
-      <div class="bg-white rounded-md shadow-xl col-start-8 row-start-1">
+      <div class="bg-white rounded-md shadow-xl order-5 md:col-start-1 md:row-start-4 lg:col-start-8 lg:row-start-1">
         <!-- Grid Container -->
         <div class="h-full p-4 grid grid-cols-2 grid-rows-2 hover:cursor-pointer">
           <!-- Header -->
@@ -376,19 +402,20 @@ onMounted(async () => {
           <!-- BODY -->
           <!-- VALUE -->
           <div class="col-span-2 row-span-1 row-start-2 flex flex-row justify-around">
-            <p class="text-6xl opacity-80 text-greener">3</p>
+            <p class="text-5xl md:text-6xl opacity-80 text-greener">3</p>
             <!-- ICON -->
-            <div class="mt-1.5">
-              <ui5-icon name="notes" class="h-[3.75rem] w-10 opacity-50" />
+            <div class="mt-3 md:mt-1.5">
+              <ui5-icon name="notes" class="h-[1.875rem] w-5 md:h-[3.75rem] md:w-10 opacity-50" />
             </div>
           </div>
         </div>
       </div>
       <!-- Notes container -->
-      <div class="bg-white rounded-md shadow-xl row-start-2 col-start-7 row-span-2 col-span-3">
+      <div
+        class="bg-white rounded-md shadow-xl order-8 col-span-2 md:row-start-4 md:col-span-4 lg:row-start-2 lg:col-start-7 lg:row-span-2 lg:col-span-3">
         <!-- Grid Container -->
         <div class="p-4 h-full">
-          <ui5-list id="myList1" mode="MultiSelect" header-text="Todos">
+          <ui5-list id="myList1" mode="MultiSelect" header-text="Todos" class="h-[100%]" growing="Scroll">
             <ui5-li>Check for malfunction on Sensor 1</ui5-li>
             <ui5-li>Check if Moinho 3 is working Properly</ui5-li>
             <ui5-li>Set up a meeting with ROMAFE</ui5-li>

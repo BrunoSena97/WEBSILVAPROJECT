@@ -14,16 +14,17 @@ module.exports = {
         greener: "#1a9850",
       },
     },
-  },
-  screens: {
-    sm: "375px",
-    // => @media (min-width: 640px) { ... }
 
-    md: "1080px",
-    // => @media (min-width: 768px) { ... }
+    screens: {
+      sm: "375px",
+      // => @media (min-width: 640px) { ... }
 
-    lg: "1920px",
-    // => @media (min-width: 1024px) { ... }
+      md: "1280px",
+      // => @media (min-width: 1280px) { ... }
+
+      lg: "1920px",
+      // => @media (min-width: 1920px) { ... }
+    },
   },
 
   plugins: [],

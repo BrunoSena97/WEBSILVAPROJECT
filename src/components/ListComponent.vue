@@ -35,7 +35,8 @@ const { listItems, listTitle } = toRefs(props);
 
 <template>
   <div>
-    <ui5-list v-if="listTitle.length" :header-text="listTitle[0].name" no-data-text="No Data Available">
+    <ui5-list v-if="listTitle.length" :header-text="listTitle[0].name" growing="Scroll"
+      no-data-text="No Data Available">
       <ui5-li v-for="item of listItems" :key="item.key" :icon="item.icon" :description="item.description"
         :additional-text="item.additionalText" :additional-text-state="item.additionalTextState"
         class="border-b border-gray-200 bg-opacity-30 rounded-md">

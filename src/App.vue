@@ -6,11 +6,11 @@ import "@ui5/webcomponents/dist/Assets.js";
 
 <template>
   <!-- APP -->
-  <div class="h-screen bg-gray-200">
+  <div class="h-screen bg-gray-200 overflow-auto">
     <!-- APPBAR -->
     <AppBar title="WebSilva" />
     <!-- APP CONTENT -->
-    <div class="h-[calc(100vh-44px)]">
+    <div class="mt-[44px] overflow-auto">
       <div class="px-12 py-5">
         <RouterView />
       </div>

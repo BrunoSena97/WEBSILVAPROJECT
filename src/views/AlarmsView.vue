@@ -15,8 +15,8 @@ import { toRaw } from "vue";
 const generalStore = useGeneralStore();
 const { alarms, points, machines } = storeToRefs(generalStore);
 
-const alarmsList = ref(alarms);
-const filteredAlarms = ref(alarms);
+const alarmsList = ref([...Object.values(alarms.value)]);
+const filteredAlarms = ref([...Object.values(alarms.value)]);
 const pointsList = ref(points);
 const machinesList = ref(machines);
 const filterType = ref("All");
@@ -53,7 +53,10 @@ function setCurrentAlarm(item) {
   currentAlarmCreated.value = item.timestamps[0].value;
   console.log("this is the alarm created date:", currentAlarmCreated.value);
   currentAlarmAknowledged.value = item.timestamps[1].value;
-  console.log("this is the alarm aknowledged date:", currentAlarmAknowledged.value);
+  console.log(
+    "this is the alarm aknowledged date:",
+    currentAlarmAknowledged.value
+  );
 
   if (type === "Temperature") {
     trend.value = true;
@@ -69,20 +72,35 @@ function setCurrentAlarm(item) {
 
 function setCurrentPoint(currentPointID) {
   const flatPoints = Object.values(pointsList.value).flat();
-  console.log("This is the raw value of the pointsList point:", toRaw(pointsList.value));
+  console.log(
+    "This is the raw value of the pointsList point:",
+    toRaw(pointsList.value)
+  );
   console.log("This is the value of the pointsList point:", pointsList.value);
-  console.log("This is the  TYPEOF pointsList point:", typeof toRaw(pointsList.value));
+  console.log(
+    "This is the  TYPEOF pointsList point:",
+    typeof toRaw(pointsList.value)
+  );
   console.log("This is the pointsList after toRaw Object.Values:", flatPoints);
-  currentPoint.value = flatPoints.find(point => point.ID === currentPointID);
+  currentPoint.value = flatPoints.find((point) => point.ID === currentPointID);
   console.log("This is the value of the current Point:", currentPoint.value);
   currentMachineID.value = currentPoint.value.MachineID;
-  console.log("This is the value of the current machine id:", currentMachineID.value);
+  console.log(
+    "This is the value of the current machine id:",
+    currentMachineID.value
+  );
 }
 
 function setCurrentMachine() {
   console.log("This is the value of the Machine List:", machinesList.value);
-  console.log("This is the raw value of the Machine List:", toRaw(machinesList.value));
-  console.log("This is the typeOf of the Machine List:", toRaw(machinesList.value));
+  console.log(
+    "This is the raw value of the Machine List:",
+    toRaw(machinesList.value)
+  );
+  console.log(
+    "This is the typeOf of the Machine List:",
+    toRaw(machinesList.value)
+  );
 
   machinesList.value.forEach((machine) => {
     console.log("This is the value of the Machine id:", machine.id);
@@ -90,7 +108,10 @@ function setCurrentMachine() {
     if (machine.id === currentMachineID.value) {
       currentMachine.value = machine;
     }
-    console.log("This is the Current Machine value", toRaw(currentMachine.value));
+    console.log(
+      "This is the Current Machine value",
+      toRaw(currentMachine.value)
+    );
   });
 }
 
@@ -246,7 +267,7 @@ function fullscreenMidColumn() {
   <!-- eslint-disable vue/no-deprecated-slot-attribute -->
   <div class="h-full">
     <div class="p-3">
-      <AlarmsHeader :alarms="alarmsList" :knownCount="filterknownAlarms(alarmsList).length"
+      <AlarmsHeader :alarms="alarms" :knownCount="filterknownAlarms(alarmsList).length"
         :unknownCount="filterUnknownAlarms(alarmsList).length" :warningCount="filterWarningAlarms(alarmsList).length"
         :alarmCount="filterAlarmsAlarms(alarmsList).length" @tabPress="applyFilter" />
     </div>
@@ -308,9 +329,7 @@ setCurrentAlarm(item);
                   <ui5-li class="border-t">Machine: {{ currentMachine.name }}</ui5-li>
                   <ui5-li class="border-t">Point: {{ currentPoint.Name }}</ui5-li>
                   <ui5-li class="border-t">Description: {{ currentPoint.Description }}</ui5-li>
-                  <ui5-li v-if="trend" class="border-t">Type: {{
-                    currentPoint.OverallAlarm.TypeName
-                  }}</ui5-li>
+                  <ui5-li v-if="trend" class="border-t">Type: {{ currentPoint.OverallAlarm.TypeName }}</ui5-li>
                   <ui5-li v-if="!trend" class="border-t">Warning:
                     {{ currentPoint.Frequencies[0].WarningLevel }} Alarm:
                     {{ currentPoint.Frequencies[0].AlarmLevel }}</ui5-li>

@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import DashboardView from "../views/DashboardView.vue";
 import RegisterView from "../views/RegisterView.vue";
 import LoginView from "../views/LoginView.vue";
+import MachinesView from "../views/MachinesView.vue";
 import { useAuthStore } from "@/stores/authStore.js";
 import { storeToRefs } from "pinia";
 
@@ -25,6 +26,12 @@ const router = createRouter({
       name: "register",
       component: RegisterView,
       meta: { auth: false },
+    },
+    {
+      path: "/Machines",
+      name: "machines",
+      component: MachinesView,
+      meta: { auth: true },
     },
     {
       path: "/alarms",
