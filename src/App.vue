@@ -10,7 +10,7 @@ import "@ui5/webcomponents/dist/Assets.js";
     <!-- APPBAR -->
     <AppBar title="WebSilva" />
     <!-- APP CONTENT -->
-    <div class="mt-[44px] overflow-auto">
+    <div class="overflow-auto">
       <div class="px-12 py-5">
         <RouterView />
       </div>
