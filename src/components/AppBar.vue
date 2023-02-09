@@ -40,7 +40,7 @@ const props = defineProps({
   },
   logo: {
     type: String,
-    default: "public/images/romafe-white.png",
+    default: "/public/images/romafe-white.png",
   },
 });
 

@@ -221,6 +221,7 @@ function applyFilter(type) {
   const alarms = filterItems(type, alarmsList.value);
   filteredAlarms.value = alarms;
   filterType.value = type;
+  closeMidColumn();
 }
 
 function filterItems(type, items) {
@@ -309,7 +310,7 @@ setCurrentAlarm(item);
               </div>
             </div>
             <!-- ColBody -->
-            <div class="grid grid-cols-2 grid-rows-2 gap-5 p-3 m-3 border rounded-md h-[60vh]">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-5 p-3 m-3 border rounded-md h-[60vh]">
               <!-- Card Common Header -->
               <div class="bg-white rounded-md flex p-3 shadow-md">
                 <ui5-list header-text="Alarm Information">
@@ -335,31 +336,19 @@ setCurrentAlarm(item);
                     {{ currentPoint.Frequencies[0].AlarmLevel }}</ui5-li>
                 </ui5-list>
               </div>
-              <div class="p-3 bg-white col-span-2 rounded-md shadow-md">
+              <div class="bg-white rounded-md flex p-3 shadow-md">
                 <!-- Alarm Values if Trend -->
-                <div class="flex flex-row" v-show="trend">
-                  <div class="basis-1/3">
-                    <ui5-list header-text="Point Values">
-                      <ui5-li class="border-t">Alarm Value: {{ currentAlarm.value.value }} ℃</ui5-li>
-                      <ui5-li class="border-t">Deviation: {{ currentDeviation }} ℃</ui5-li>
-                      <ui5-li class="border-t">Source: {{ currentAlarm.source }}</ui5-li>
-                    </ui5-list>
-                  </div>
-                  <!-- TRENDCHART -->
-                  <div class="basis-2/3"></div>
-                </div>
+                <ui5-list v-show="trend" header-text="Point Values" growing="Scroll">
+                  <ui5-li class="border-t">Alarm Value: {{ currentAlarm.value.value }} ℃</ui5-li>
+                  <ui5-li class="border-t">Deviation: {{ currentDeviation }} ℃</ui5-li>
+                  <ui5-li class="border-t">Source: {{ currentAlarm.source }}</ui5-li>
+                </ui5-list>
                 <!-- Alarm Values if Dynamic -->
-                <div class="flex flex-row" v-show="!trend">
-                  <div class="basis-1/3">
-                    <ui5-list header-text="Point Values">
-                      <ui5-li class="border-t">Alarm Value: {{ currentAlarm.value.value }}g P</ui5-li>
-                      <ui5-li class="border-t">Deviation: {{ currentDeviation }} g P</ui5-li>
-                      <ui5-li class="border-t">Source: {{ currentAlarm.source }}</ui5-li>
-                    </ui5-list>
-                  </div>
-                  <!-- TRENDCHART -->
-                  <div class="basis-2/3"></div>
-                </div>
+                <ui5-list v-show="!trend" header-text="Point Values">
+                  <ui5-li class="border-t">Alarm Value: {{ currentAlarm.value.value }}g P</ui5-li>
+                  <ui5-li class="border-t">Deviation: {{ currentDeviation }} g P</ui5-li>
+                  <ui5-li class="border-t">Source: {{ currentAlarm.source }}</ui5-li>
+                </ui5-list>
               </div>
             </div>
           </div>
